@@ -590,6 +590,7 @@ async def auto_backup_loop():
 
 async def main():
     await db.init_db()
+    dp.include_router(user_router)
     asyncio.create_task(auto_backup_loop())
     print("Бот успешно запущен!")
     while True:
