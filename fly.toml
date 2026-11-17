@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for 19716871 on 2026-11-17T15:44:54Z
+# fly.toml app configuration file generated for 12348326 on 2026-11-17T16:01:01Z
 #
 # See https://docs.fly.io/reference/configuration for information about how to use this file.
 #
 
-app = '19716871'
+app = '12348326'
 primary_region = 'ams'
 
 [build]
