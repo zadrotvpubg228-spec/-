@@ -2,6 +2,24 @@ import asyncio
 import html
 import random
 import time
+import os
+from http.server import HTTPServer, BaseHTTPRequestHandler
+import threading
+
+# Заглушка веб-сервера для Render, чтобы хостинг видел открытый порт
+class SimpleHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(b"Bot is alive!")
+
+def run_web_server():
+    port = int(os.environ.get("PORT", 10000))
+    server = HTTPServer(("0.0.0.0", port), SimpleHandler)
+    server.serve_forever()
+
+# Запускаем веб-сервер в фоновом потоке, чтобы он не мешал боту
+threading.Thread(target=run_web_server, daemon=True).start()
 
 from aiogram import Bot, Dispatcher, F, Router
 from aiogram.client.default import DefaultBotProperties
