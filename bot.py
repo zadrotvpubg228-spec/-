@@ -535,7 +535,7 @@ from aiogram.types import FSInputFile
 from aiogram.filters import Command
 from config import ADMIN_ID, DB_PATH
 
-@dp.message(Command("backup"))
+@user_router.message(Command("backup"))
 async def cmd_backup(message: types.Message):
     if message.from_user.id not in ADMIN_IDS:
         return
@@ -547,7 +547,7 @@ async def cmd_backup(message: types.Message):
     except Exception as e:
         await message.answer(f"❌ Ошибка бэкапа: {e}")
 
-@dp.message(Command("restore"))
+@user_router.message(Command("restore"))
 async def cmd_restore(message: types.Message):
     if message.from_user.id not in ADMIN_IDS:
         return
