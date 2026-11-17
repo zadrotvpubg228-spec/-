@@ -2,6 +2,8 @@ BOT_TOKEN = "9077350079:AAFG_Mng2tvizfV3_Dnq_2ipo2YtLgJf6TU"
 
 # Твой ID администратора (уже прописан)
 ADMIN_IDS = [8526008350]
+ADMIN_IDS = 8526008350
+ADMIN_ID = ADMIN_IDS
 
 # Стартовый баланс и фарм (100 ⭐ каждые 10 минут)
 START_BALANCE = 500
