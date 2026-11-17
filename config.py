@@ -85,3 +85,4 @@ CASES_CATALOG = {
         ],
     },
 }
+DB_PATH = "game_bot.db"
