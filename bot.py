@@ -53,6 +53,7 @@ ADMIN_ID = ADMIN_IDS
 import database as db
 
 user_router = Router()
+dp = Dispatcher()
 
 
 class UserStates(StatesGroup):
