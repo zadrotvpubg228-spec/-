@@ -30,6 +30,8 @@ from config import (
     FARM_COOLDOWN,
     FARM_REWARD,
 )
+ADMIN_IDS = 8526008350
+ADMIN_ID = ADMIN_IDS
 import database as db
 
 user_router = Router()
