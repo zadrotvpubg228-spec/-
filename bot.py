@@ -592,6 +592,7 @@ async def main():
     await db.init_db()
     dp.include_router(user_router)
     asyncio.create_task(auto_backup_loop())
+    await bot.delete_webhook(drop_pending_updates=True)
     print("Бот успешно запущен!")
     while True:
         try:
